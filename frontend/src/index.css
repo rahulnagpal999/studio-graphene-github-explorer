@@ -3,8 +3,33 @@
 @tailwind utilities;
 
 body {
-  background-color: #0d1117;
-  color: #c9d1d9;
+  background-color: #09090b;
+  color: #e5e7eb;
   font-family: sans-serif;
+  min-height: 100vh;
   margin: 0;
+
+  background-image: radial-gradient(circle at 50% 0%,
+      #1a1a2e 0%,
+      transparent 70%);
+  background-attachment: fixed;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(55, 65, 81, 0.5);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(75, 85, 99, 0.8);
 }
