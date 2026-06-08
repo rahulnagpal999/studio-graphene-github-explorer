@@ -24,24 +24,24 @@ const RepoItem = ({ repo }) => {
   const langColor = languageColors[repo.language] || '#8b949e';
 
   return (
-    <div className="bg-github-dark border border-github-border rounded-lg p-5 hover:border-github-muted transition-all hover:shadow-lg flex flex-col h-full group">
+    <div className="bg-gray-900 border border-gray-700 rounded-lg p-5 hover:border-gray-500 transition-all hover:shadow-lg flex flex-col h-full group">
       <div className="flex justify-between items-start mb-2">
-        <h3 className="text-xl font-semibold text-github-blue group-hover:underline truncate max-w-[85%]">
+        <h3 className="text-xl font-semibold text-blue-500 group-hover:underline truncate max-w-[85%]">
           <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
             {repo.name}
           </a>
         </h3>
-        <div className="flex items-center text-github-muted bg-github-gray px-2 py-1 rounded-full text-xs font-medium border border-github-border">
+        <div className="flex items-center text-gray-500 bg-gray-800 px-2 py-1 rounded-full text-xs font-medium border border-gray-700">
           <Star className="w-3.5 h-3.5 mr-1" />
           <span>{repo.stargazers_count}</span>
         </div>
       </div>
 
-      <p className="text-github-text text-sm flex-grow mb-4 line-clamp-2">
-        {repo.description || <span className="italic text-github-muted">No description provided</span>}
+      <p className="text-gray-300 text-sm flex-grow mb-4 line-clamp-2">
+        {repo.description || <span className="italic text-gray-500">No description provided</span>}
       </p>
 
-      <div className="flex items-center text-xs text-github-muted gap-4 mt-auto">
+      <div className="flex items-center text-xs text-gray-500 gap-4 mt-auto">
         {repo.language && (
           <div className="flex items-center">
             <Circle className="w-3 h-3 mr-1.5" fill={langColor} color={langColor} />

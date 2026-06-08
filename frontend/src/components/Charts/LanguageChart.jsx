@@ -28,7 +28,7 @@ const LanguageChart = ({ repos }) => {
   }
 
   return (
-    <div className="bg-github-dark border border-github-border rounded-xl p-6 mt-8 shadow-sm hover:border-github-muted transition-colors">
+    <div className="bg-gray-900 border border-gray-700 rounded-xl p-6 mt-8 shadow-sm hover:border-gray-500 transition-colors">
       <h2 className="text-xl font-bold text-white mb-6 text-center">Top Languages Used</h2>
       <div className="h-72">
         <ResponsiveContainer width="100%" height="100%">
@@ -48,8 +48,8 @@ const LanguageChart = ({ repos }) => {
               ))}
             </Pie>
             <Tooltip
-              contentStyle={{ backgroundColor: '#161b22', border: '1px solid #30363d', borderRadius: '8px', color: '#c9d1d9' }}
-              itemStyle={{ color: '#c9d1d9' }}
+              contentStyle={{ backgroundColor: '#1f2937', border: '1px solid #374151', borderRadius: '8px', color: '#d1d5db' }}
+              itemStyle={{ color: '#d1d5db' }}
             />
             <Legend verticalAlign="bottom" height={36} wrapperStyle={{ paddingTop: '20px' }}/>
           </PieChart>

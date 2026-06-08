@@ -26,7 +26,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-github-dark text-github-text font-sans p-4 md:p-8">
+    <div className="min-h-screen bg-gray-900 text-gray-300 font-sans p-4 md:p-8">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <header className="flex flex-col items-center justify-center mb-12 mt-8">
@@ -35,7 +35,7 @@ function App() {
               GitHub Explorer
             </h1>
           </div>
-          <p className="text-github-muted text-center max-w-xl">
+          <p className="text-gray-500 text-center max-w-xl">
             Discover developers, explore their repositories, and analyze their most used languages instantly.
           </p>
         </header>
@@ -48,8 +48,8 @@ function App() {
         {/* Loading State */}
         {isLoading && (
           <div className="flex flex-col items-center justify-center py-20 space-y-4">
-            <div className="w-12 h-12 border-4 border-github-border border-t-github-blue rounded-full animate-spin"></div>
-            <p className="text-github-muted font-medium animate-pulse">Fetching from GitHub...</p>
+            <div className="w-12 h-12 border-4 border-gray-700 border-t-blue-500 rounded-full animate-spin"></div>
+            <p className="text-gray-500 font-medium animate-pulse">Fetching from GitHub...</p>
           </div>
         )}
 

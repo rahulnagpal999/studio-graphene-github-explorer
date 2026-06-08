@@ -21,8 +21,8 @@ const RepoList = ({ repos }) => {
 
   if (!repos || repos.length === 0) {
     return (
-      <div className="text-center p-8 bg-github-gray rounded-xl border border-github-border mt-8">
-        <p className="text-github-muted">No public repositories found.</p>
+      <div className="text-center p-8 bg-gray-800 rounded-xl border border-gray-700 mt-8">
+        <p className="text-gray-500">No public repositories found.</p>
       </div>
     );
   }
@@ -31,20 +31,20 @@ const RepoList = ({ repos }) => {
     <div className="mt-8">
       <div className="flex flex-col sm:flex-row justify-between items-center mb-6">
         <h2 className="text-2xl font-bold text-white mb-4 sm:mb-0">
-          Repositories <span className="bg-github-border text-xs px-2 py-1 rounded-full ml-2 text-github-text">{repos.length}</span>
+          Repositories <span className="bg-gray-700 text-xs px-2 py-1 rounded-full ml-2 text-gray-300">{repos.length}</span>
         </h2>
         
-        <div className="flex items-center space-x-2 bg-github-dark border border-github-border p-1.5 rounded-lg">
-          <ArrowDownWideNarrow className="w-4 h-4 text-github-muted ml-2" />
-          <span className="text-sm text-github-muted font-medium px-2">Sort by:</span>
+        <div className="flex items-center space-x-2 bg-gray-900 border border-gray-700 p-1.5 rounded-lg">
+          <ArrowDownWideNarrow className="w-4 h-4 text-gray-500 ml-2" />
+          <span className="text-sm text-gray-500 font-medium px-2">Sort by:</span>
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
             className="bg-transparent text-white text-sm font-medium focus:outline-none cursor-pointer py-1 pr-2 appearance-none"
           >
-            <option value="updated" className="bg-github-dark text-white">Recently Updated</option>
-            <option value="stars" className="bg-github-dark text-white">Most Stars</option>
-            <option value="name" className="bg-github-dark text-white">Name (A-Z)</option>
+            <option value="updated" className="bg-gray-900 text-white">Recently Updated</option>
+            <option value="stars" className="bg-gray-900 text-white">Most Stars</option>
+            <option value="name" className="bg-gray-900 text-white">Name (A-Z)</option>
           </select>
         </div>
       </div>
