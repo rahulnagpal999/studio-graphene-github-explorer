@@ -54,13 +54,32 @@ const SearchBar = ({ onSearch, isLoading }) => {
           onFocus={() => setShowRecent(true)}
           onBlur={() => setTimeout(() => setShowRecent(false), 500)}
           placeholder="Search GitHub username..."
-          className="w-full bg-gray-900 border border-gray-700 rounded-lg py-3 pl-12 pr-32 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
           disabled={isLoading}
+          style={{
+            width: "100%",
+            padding: "12px 140px 12px 50px",
+            background: "#161b22",
+            color: "white",
+            border: "1px solid #30363d",
+            borderRadius: "8px",
+            fontSize: "16px"
+          }}
         />
         <button
           type="submit"
           disabled={isLoading || !username.trim()}
-          className="absolute right-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md disabled:opacity-50"
+          style={{
+            position: "absolute",
+            right: "8px",
+            top: "50%",
+            transform: "translateY(-50%)",
+            background: "#238636",
+            color: "white",
+            border: "none",
+            borderRadius: "6px",
+            padding: "8px 16px",
+            cursor: "pointer"
+          }}
         >
           {isLoading ? 'Searching...' : 'Search'}
         </button>
